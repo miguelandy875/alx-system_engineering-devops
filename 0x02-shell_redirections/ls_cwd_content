@@ -1,0 +1,12 @@
+total 40
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  4 18:54 .
+drwxrwxr-x 7 vagrant vagrant 4096 Apr  4 18:07 ..
+-rwxr-xr-- 1 vagrant vagrant   33 Apr  4 18:43 0-hello_world
+-rwxr-xr-- 1 vagrant vagrant   29 Apr  4 18:10 2-hellofile
+-rwxr-xr-- 1 vagrant vagrant   39 Apr  4 18:10 3-twofiles
+-rwxr-xr-- 1 vagrant vagrant   35 Apr  4 18:10 4-lastlines
+-rwxr-xr-- 1 vagrant vagrant   35 Apr  4 18:10 5-firstlines
+-rwxr-xr-- 1 vagrant vagrant   41 Apr  4 18:10 6-third_line
+-rw-rw-r-- 1 vagrant vagrant   42 Apr  4 18:07 README.md
+-rw-rw-r-- 1 vagrant vagrant  360 Apr  4 18:10 iacta
+-rw-rw-r-- 1 vagrant vagrant    0 Apr  4 18:57 ls_cwd_content
