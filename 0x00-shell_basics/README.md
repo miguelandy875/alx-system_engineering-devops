@@ -118,7 +118,7 @@ lll
 julien@ubuntu:/tmp$ 
 ```
 # Quiz questions
-  ```sh
+ 
   
   ### Question #0  
   What command would you use to list files on Linux?
@@ -128,7 +128,3 @@ julien@ubuntu:/tmp$
   - [ ] list  
   - [ ] which 
   
-  
-  ```
-  
-
