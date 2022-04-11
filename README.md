@@ -1,3 +1,3 @@
 ## System engineering and DevOps
 
-_- Shell scripting_
+- _Shell scripting_
