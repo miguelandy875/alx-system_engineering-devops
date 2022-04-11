@@ -71,50 +71,35 @@ Note: You do not have to learn about `awk`, `tar`, `bzip2`, `date`, `scp`, `ulim
  
   
   ### Question #0
-  Which symbol should I use to redirect the standard output to a file (overwrite the file)?
-  - [ ] >>
-  - [ ] 2> 
-  - [x] >  
-  - [ ] &
+ Which command should I use to display a variable?
+  - [ ] $MYVAR
+  - [ ] cd $MYVAR
+  - [ ] export $MYVAR
+  - [x] echo $MYVAR
   
   ### Question #1  
-  Which symbol should I use to redirect the standard output to a file (appending to the file)?
-  - [x] >>
-  - [ ] 2> 
-  - [ ] >  
-  - [ ] &
+  What is the variable name who contains the previous working directory path?
+  - [x] OLDPWD
+  - [ ] PREVPWD
+  - [ ] OLDDIR
+  - [ ] PREVDIR&
   
   ### Question #2
-  Which symbol should I use to redirect the error output to the standard output?
-  - [x] 2>&1
-  - [ ] 2> 
-  - [ ] 1>&2  
+  Which command should I use to display the exit code of the previous command?
+  - [ ] echo ?
+  - [ ] echo $EXITCODE
+  - [x] echo $? 
+  - [ ] echo $CODE
   
   ### Question #3
-  Which symbol should I use to start a comment?
-  - [ ] &
-  - [ ] !
-  - [ ] //
-  - [X] #
-    
-  ### Question #4
-  Which command should I use to display the entire file content?
-  - [ ] grep
-  - [x] cat
-  - [ ] head
-  - [ ] tail
-    
-  ### Question #5
-  Which command should I use to display the last 11 lines of a file?
-  - [ ] head -n 11 my_file
-  - [ ] head 11 my_file
-  - [x] tail -n 11 my_file
-  - [ ] tail 11 my_file
-
-  ### Question #6
- Which symbol should I use to escape a special character?
- - [x] \
- - [ ] !
- - [ ] $
- - [ ] #   
-    
+  Which command should I use to define a new command push for pushing in Github?  
+  Example:
+  ```sh
+  $ push 
+  Everything up-to-date
+  $
+  ```
+  - [x] alias push="git push"
+  - [ ] export push="git push"
+  - [ ] alias push=git push
+  - [ ] export push=git push
