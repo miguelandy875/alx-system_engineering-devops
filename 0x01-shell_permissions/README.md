@@ -68,26 +68,29 @@ At the end of this project, you are expected to be able to [explain to anyone](h
   
   ### Question #3
   What is the permission value for a file read only for the group owner?
-    - [x] 040
-    - [ ] 050
-    - [ ] 060
-    - [ ] 070
+  - [x] 040
+  - [ ] 050
+  - [ ] 060
+  - [ ] 070
+    
   ### Question #4
   What is the numerical value for the rwx------ permission?
-    - [ ] 600
-    - [ ] 621
-    - [ ] 704
-    - [x] 700
+  - [ ] 600
+  - [ ] 621
+  - [ ] 704
+  - [x] 700
+    
   ### Question #5
   What is the numerical value for the r-xr--r-- permission?
-    - [ ] 522
-    - [x] 544
-    - [ ] 644
-    - [ ] 411
+  - [ ] 522
+  - [x] 544
+  - [ ] 644
+  - [ ] 411
+    
   ### Question #6
   What is the numerical value for the ----w---x permission?
-    - [ ] 123
-    - [ ] 121
-    - [ ] 221
-    - [x] 021   
+  - [ ] 123
+  - [ ] 121
+  - [ ] 221
+  - [x] 021   
     
