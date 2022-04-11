@@ -119,12 +119,12 @@ julien@ubuntu:/tmp$
 ```
 # Quiz questions
   
-  Question #0
+  Question #0  
   What command would you use to list files on Linux?
-  [ ] pwd  
-  [ ] cd  
-  [ x ] ls  
-  [ ] list  
-  [ ] which  
+  - [ ] pwd  
+  - [ ] cd  
+  - [x] ls  
+  - [ ] list  
+  - [ ] which  
   
 
