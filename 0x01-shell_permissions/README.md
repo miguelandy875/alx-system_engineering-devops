@@ -74,21 +74,21 @@ At the end of this project, you are expected to be able to [explain to anyone](h
   - [ ] 070
     
   ### Question #4
-  What is the numerical value for the rwx------ permission?
+  What is the numerical value for the `rwx------` permission?
   - [ ] 600
   - [ ] 621
   - [ ] 704
   - [x] 700
     
   ### Question #5
-  What is the numerical value for the r-xr--r-- permission?
+  What is the numerical value for the `r-xr--r--` permission?
   - [ ] 522
   - [x] 544
   - [ ] 644
   - [ ] 411
     
   ### Question #6
-  What is the numerical value for the ----w---x permission?
+  What is the numerical value for the `----w---x` permission?
   - [ ] 123
   - [ ] 121
   - [ ] 221
