@@ -1,5 +1,5 @@
 # Project: 0x00. Shell, basics
-----------
+
 ## Resources
 **Read or watch:**
 - [What Is “The Shell”?](http://linuxcommand.org/lc3_lts0010.php)
