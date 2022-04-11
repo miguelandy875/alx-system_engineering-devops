@@ -1,4 +1,4 @@
-# Project: 0x00. Shell, basics
+# Project: 0x01. Shell, permissions
 
 ## Resources
 **Read or watch:**
