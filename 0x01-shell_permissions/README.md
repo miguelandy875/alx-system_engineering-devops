@@ -47,28 +47,47 @@ At the end of this project, you are expected to be able to [explain to anyone](h
  
   
   ### Question #0  
-  What command would you use to list files on Linux?
-  - [ ] pwd  
-  - [ ] cd  
-  - [x] ls  
-  - [ ] list  
-  - [ ] which 
+  Which command should I use for changing a file permission?
+  - [ ] su
+  - [x] chmod 
+  - [ ] chown  
+  - [ ] chgrp 
   
   ### Question #1
-  What does LTS stand for?
-  - [x] Long Term Support
-  - [ ] Long Time Support
-  - [ ] Last Terrible Service
+  Which command should I use for changing a file owner?
+  - [ ] su
+  - [ ] chmod 
+  - [x] chown  
+  - [ ] chgrp
   
   ### Question #2
-  How do you change directory on Linux?
-  - [ ] pwd
-  - [x] cd
-  - [ ] ls
-  - [ ] which
-
+  What is the permission value for a file without any restriction?
+  - [ ] 600
+  - [ ] 644
+  - [x] 777
+  
   ### Question #3
-  What does RTFM stand for?
-  - [ ] Remember The First Manipulation
-  - [ ] Read, Teach, Forget, Migrate
-  - [x] Read The F** Manual
+  What is the permission value for a file read only for the group owner?
+    - [x] 040
+    - [ ] 050
+    - [ ] 060
+    - [ ] 070
+  ### Question #4
+  What is the numerical value for the rwx------ permission?
+    - [ ] 600
+    - [ ] 621
+    - [ ] 704
+    - [x] 700
+  ### Question #5
+  What is the numerical value for the r-xr--r-- permission?
+    - [ ] 522
+    - [x] 544
+    - [ ] 644
+    - [ ] 411
+  ### Question #6
+  What is the numerical value for the ----w---x permission?
+    - [ ] 123
+    - [ ] 121
+    - [ ] 221
+    - [x] 021   
+    
