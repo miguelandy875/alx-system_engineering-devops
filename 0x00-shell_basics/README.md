@@ -128,3 +128,21 @@ julien@ubuntu:/tmp$
   - [ ] list  
   - [ ] which 
   
+  ### Question #1
+  What does LTS stand for?
+  - [x] Long Term Support
+  - [ ] Long Time Support
+  - [ ] Last Terrible Service
+  
+  ### Question #2
+  How do you change directory on Linux?
+  - [ ] pwd
+  - [x] cd
+  - [ ] ls
+  - [ ] which
+
+  ### Question #3
+  What does RTFM stand for?
+  - [ ] Remember The First Manipulation
+  - [ ] Read, Teach, Forget, Migrate
+  - [x] Read The F** Manual
