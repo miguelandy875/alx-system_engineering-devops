@@ -50,11 +50,11 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 - What are the characteristics of hidden files and how to list them
 - What does the command `cd -` do
 # Looking Around
-- What do the commands ls, less, file do
+- What do the commands `ls`, `less`, `file` do
 - How do you use options and arguments with commands
 - Understand the ls long format and how to display it
-- A Guided Tour
-- What does the ln command do
+- [A Guided Tour](http://linuxcommand.org/lc3_lts0040.php)
+- What does the `ln` command do
 - What do you find in the most common/important directories
 - What is a symbolic link
 - What is a hard link
@@ -75,13 +75,13 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 # Keyboard Shortcuts for Bash
 - Common shortcuts for Bash
 # LTS
-- What does LTS mean?
+- What does `LTS` mean?
 # Requirements
 ## General
 Allowed editors: `vi`, `vim`, `emacs`  
 All your scripts will be tested on Ubuntu 20.04 LTS    
 All your scripts should be exactly two lines long (`$ wc -l file` should print 2)   
-All your files should end with a new line (`why?`)    
+All your files should end with a new line ([why?](https://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789))    
 The first line of all your files should be exactly `#!/bin/bash`    
 A `README.md` file at the root of the repo, containing a description of the repository    
 A `README.md` file, at the root of the folder of this project, describing what each script is doing    
