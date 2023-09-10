@@ -1,1 +1,6 @@
 #!/bin/bash
+
+owner="vincent"
+group="staff"
+
+chown "$owner:$group" "_hello"
