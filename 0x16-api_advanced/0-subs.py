@@ -6,7 +6,7 @@ def number_of_subscribers(subreddit):
     
     try:
         # Make the GET request to the Reddit API
-        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, allow_redirects=False)
         
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
