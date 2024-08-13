@@ -1,60 +1,59 @@
+#!/usr/bin/python3
+"""Query Reddit API to determine subreddit
+"""
+
 import requests
-import re
-from collections import defaultdict
 
-def count_words(subreddit, word_list, counts=None, after=None):
-    # Initialize counts dictionary on first call
-    if counts is None:
-        counts = defaultdict(int)
-    
-    # Define the Reddit API URL for hot posts with optional pagination
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    params = {'after': after} if after else {}
 
-    try:
-        # Make the GET request to the Reddit API
-        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, params=params, allow_redirects=False)
-        
-        # Check if the request was successful (status code 200)
-        if response.status_code == 200:
-            # Parse the JSON response
-            data = response.json()
-            
-            # Extract the list of hot posts
-            posts = data.get('data', {}).get('children', [])
-            
-            # If no posts are found, handle base case
-            if not posts:
-                return counts if any(counts.values()) else None
+def count_words(subreddit, word_list, count_list=[], next_page=None):
+    """Request subreddit recursively using pagination
+    """
+    # convert word_list to dict with count
+    if not count_list:
+        for word in word_list:
+            count_list.append(dict({'keyword': word,
+                                    'count': 0}))
 
-            # Process each post
-            for post in posts:
-                title = post.get('data', {}).get('title', '').lower()
-                # Count occurrences of each keyword in the title
-                for word in word_list:
-                    word = word.lower()
-                    # Create a regex pattern to match the keyword
-                    pattern = re.compile(r'\b' + re.escape(word) + r'\b')
-                    counts[word] += len(pattern.findall(title))
-            
-            # Get the 'after' parameter for pagination
-            after = data.get('data', {}).get('after')
-            
-            # If there is more data, recurse with the new 'after' parameter
-            if after:
-                return count_words(subreddit, word_list, counts, after)
-            else:
-                # Print the results
-                sorted_counts = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
-                for word, count in sorted_counts:
-                    if count > 0:
-                        print(f"{word}: {count}")
-                return counts
-            
-        else:
-            # Print nothing if the subreddit is invalid
-            return None
-    except requests.RequestException:
-        # Handle any exceptions (network issues, etc.) and return None
-        return None
+    # NETWORKING
+    # set custom user-agent
+    user_agent = '0x16-api_advanced-miguelandy875'
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    # if page specified, pass as parameter
+    if next_page:
+        url += '?after={}'.format(next_page)
 
+    headers = {'User-Agent': user_agent}
+
+    r = requests.get(url, headers=headers, allow_redirects=False)
+
+    if r.status_code != 200:
+        return
+
+    # DATA PARSING
+    # load response unit from json
+    data = r.json()['data']
+
+    # extract list of pages
+    posts = data['children']
+    for post in posts:
+        title = post['data']['title']
+        for item in count_list:
+            title_lower = title.lower()
+            title_list = title_lower.split()
+            item['count'] += title_list.count(item['keyword'].lower())
+
+    next_page = data['after']
+    if next_page is not None:
+        return count_words(subreddit, word_list, count_list, next_page)
+    else:
+        # sort list by count
+        sorted_list = sorted(count_list,
+                             key=lambda word: (word['count'], word['keyword']),
+                             reverse=True)
+        keywords_matched = 0
+        # print keywords and counts
+        for word in sorted_list:
+            if word['count'] > 0:
+                print('{}: {}'.format(word['keyword'], word['count']))
+                keywords_matched += 1
+        return
